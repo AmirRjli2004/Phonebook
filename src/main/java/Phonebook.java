@@ -75,7 +75,7 @@ public class Phonebook {
         for (Person contact : contacts) {
             if (contact == null)
                 return 0;
-            else if (Objects.equals(contact.getName(), name)) {
+            else if (Objects.equals(contact.getName(), name) && !Objects.equals(contact.getPhone(),newPhone)) {//!Objects.equals(contact.getPhone(),newPhone
                 contact.setPhone(newPhone);
                 return 1;
             }
